@@ -1,0 +1,28 @@
+@import "../settings.scss";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 70px;
+
+  img {
+    width: 145px;
+    height: 49px;
+  }
+
+  ul {
+    display: flex;
+    gap: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.2em;
+    color: $primary-color;
+  }
+
+  .nav-active {
+    text-decoration: underline;
+  }
+}

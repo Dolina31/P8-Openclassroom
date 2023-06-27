@@ -1,11 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Errorpage from './pages/Errorpage';
+import Home from './pages/Home';
 
 const App = () => {
     return (
-        <div>
-            <h1>Test</h1>
-        </div>
+       <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/*" element={<Errorpage />} />
+        </Routes>
+       </BrowserRouter>
     );
 };
 
