@@ -3,11 +3,12 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin: 40px 70px;
+  align-items: center;
+  margin: 20px 40px;
 
   img {
-    width: 145px;
-    height: 49px;
+    width: 115px;
+    height: 35px;
   }
 
   ul {

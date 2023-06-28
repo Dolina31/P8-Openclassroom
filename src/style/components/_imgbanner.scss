@@ -1,0 +1,25 @@
+.img-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  img {
+    position: relative;
+    z-index: 0;
+    @include banner-img;
+  }
+
+  p {
+    z-index: 1;
+    font-size: 2.5rem;
+    position: absolute;
+    color: white;
+  }
+}
+.img-overlay {
+  z-index: 1;
+  position: absolute;
+  @include banner-img;
+  background-color: rgba(22, 22, 22, 0.199);
+}

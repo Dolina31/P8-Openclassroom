@@ -1,16 +1,16 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Error404 from "../components/Error404";
 import Footer from "../components/Footer";
+import Aboutcontent from "../components/Aboutcontent";
 
-const Errorpage = () => {
+const About = () => {
   return (
     <div className="page-position">
       <Navigation />
-      <Error404 />
+      <Aboutcontent />
       <Footer />
     </div>
   );
 };
 
-export default Errorpage;
+export default About;
