@@ -1,0 +1,13 @@
+@keyframes fade-in {
+  from {
+    margin-top: -3rem;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+.dropdown-content {
+  z-index: 0;
+  animation: fade-in 0.5s ease-in-out alternate;
+}
