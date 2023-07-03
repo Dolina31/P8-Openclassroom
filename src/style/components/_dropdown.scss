@@ -1,3 +1,33 @@
+.dropdown-content {
+  z-index: 0;
+  font-size: 1.35em;
+  line-height: 1.5;
+  padding: 30px;
+  background-color: #f6f6f6;
+  border-radius: 5px 0px 0px 5px;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.dropdown {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $primary-color;
+
+  h1 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+
+  img {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 @keyframes fade-in {
   from {
     margin-top: -3rem;
@@ -5,9 +35,4 @@
   to {
     margin-bottom: 0;
   }
-}
-
-.dropdown-content {
-  z-index: 0;
-  animation: fade-in 0.5s ease-in-out alternate;
 }
