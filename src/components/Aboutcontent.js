@@ -23,7 +23,11 @@ const Aboutcontent = () => {
 
       <div className="about-infos">
         {aboutInfos.map((info, index) => (
-          <Dropdown key={index} title={info} content={infosContent[info]} />
+          <Dropdown
+            key={index}
+            title={info}
+            content={<p>{infosContent[info]}</p>}
+          />
         ))}
       </div>
     </div>

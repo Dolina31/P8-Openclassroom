@@ -5,7 +5,7 @@ import Housingcontent from "../components/Housingcontent";
 
 const Housing = () => {
   return (
-    <div>
+    <div className="page-position">
       <Navigation />
       <Housingcontent />
       <Footer />

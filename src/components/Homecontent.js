@@ -1,15 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
-import logements from "../logements.json";
+import Logementsdata from "./Logementsdata";
 
 const Homecontent = () => {
-  const [logementsData, setLogementsData] = useState([]);
-
-  useEffect(() => {
-    setLogementsData(logements);
-    console.log(logements);
-  }, []);
+  const logementsData = Logementsdata();
 
   return (
     <div>
@@ -20,11 +13,9 @@ const Homecontent = () => {
       </div>
       <div className="home-gallery">
         {logementsData.map((logement, index) => (
-          <NavLink to={`/housing/${logement.id}`} key={index}>
-            <div className="card" id={logement.id}>
-              <img src={logement.cover} alt="Pièce d'un logement" />
-              <h3>{logement.title}</h3>
-            </div>
+          <NavLink to={`${logement.id}`} className="card" key={index}>
+            <img src={logement.cover} alt="Pièce d'un logement" />
+            <h3>{logement.title}</h3>
           </NavLink>
         ))}
       </div>
