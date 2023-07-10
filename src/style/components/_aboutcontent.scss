@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
 
-  .dropdown-position {
+  .dropdown {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,11 +12,11 @@
     padding-bottom: 30px;
   }
 
-  .dropdown {
+  .dropdown_bar {
     width: 70%;
   }
 
-  .dropdown-content {
+  .dropdown_content {
     width: 68%;
   }
 }

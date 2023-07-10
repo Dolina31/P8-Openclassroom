@@ -8,12 +8,12 @@ const Dropdown = ({ title, content }) => {
   };
 
   return (
-    <div className="dropdown-position">
-      <div className="dropdown">
+    <div className={`dropdown ${openDropdown ? "open" : "close"}`}>
+      <div className="dropdown_bar">
         <h1>{title}</h1>
         <img src="./img/arrow_icon.png" alt="flèche" onClick={toggleDropdown} />
       </div>
-      {openDropdown && <div className="dropdown-content">{content}</div>}
+      <div className="dropdown_content">{content}</div>
     </div>
   );
 };

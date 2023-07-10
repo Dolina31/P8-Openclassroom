@@ -7,6 +7,7 @@
   justify-content: center;
   gap: 40px;
   padding-top: 30px;
+  padding-bottom: 30px;
   border-radius: 20px;
 }
 .card {
@@ -15,8 +16,8 @@
   img {
     object-fit: cover;
     width: 320px;
-    height: 320px;
-    border-radius: 5px;
+    border-radius: 7px;
+    aspect-ratio: 3/3;
   }
 
   h3 {
@@ -27,5 +28,24 @@
     color: white;
     left: 10px;
     bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .home-gallery {
+    gap: 20px;
+    background: none;
+    margin: 3%;
+  }
+  .card {
+    img {
+      width: 90%;
+      padding-left: 5%;
+      height: 255px;
+      aspect-ratio: 8/3;
+    }
+    h3 {
+      padding-left: 5%;
+    }
   }
 }

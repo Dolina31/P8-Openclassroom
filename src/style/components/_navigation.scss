@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 8%;
+  margin: 20px 8%;
 
   img {
-    width: 115px;
-    height: 35px;
+    width: 155px;
+    height: 55px;
   }
 
   ul {
@@ -25,5 +25,15 @@
 
   .nav-active {
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation {
+    justify-content: center;
+
+    ul {
+      gap: 20px;
+    }
   }
 }

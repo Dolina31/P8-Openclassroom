@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Logementsdata from "./Logementsdata";
 import Dropdown from "./Dropdown";
+import Error404 from "./Error404";
 
 const Housingcontent = () => {
   const { id } = useParams();
@@ -10,7 +11,11 @@ const Housingcontent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!logement) {
-    return <div>Logement introuvable.</div>;
+    return (
+      <div>
+        <Error404 />
+      </div>
+    );
   }
 
   const nextSlide = () => {
@@ -25,8 +30,10 @@ const Housingcontent = () => {
     );
   };
 
+  const hostnamearray = logement.host.name.split(" ");
+
   return (
-    <div>
+    <div className="housing">
       <div className="carrousel-position">
         <div className="carrousel">
           <img
@@ -39,11 +46,13 @@ const Housingcontent = () => {
               <img
                 className="arrow left-arrow"
                 src="./img/left-arrow.png"
+                alt="flèche vers la gauche"
                 onClick={previousSlide}
               />
               <img
                 className="arrow right-arrow"
                 src="./img/right-arrow.png"
+                alt="flèche vers la droite"
                 onClick={nextSlide}
               />
               <span className="carrousel_slide-number">
@@ -57,15 +66,33 @@ const Housingcontent = () => {
         <div className="logement-infos">
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
-          <div className="tags">
-            {logement.tags.map((tag, index) => (
-              <button key={index}>{tag}</button>
-            ))}
-          </div>
         </div>
         <div className="host-infos">
-          <p>{logement.host.name}</p>
+          <div className="host-name">
+            <p>{hostnamearray[0]}</p>
+            <p>{hostnamearray[1]}</p>
+          </div>
           <img src={logement.host.picture} alt="" />
+        </div>
+      </div>
+      <div className="tags-and-rate">
+        <div className="tags">
+          {logement.tags.map((tag, index) => (
+            <button key={index}>{tag}</button>
+          ))}
+        </div>
+        <div className="rate">
+          {Array.from({ length: 5 }, (_, index) => (
+            <img
+              key={index}
+              src={
+                index < logement.rating
+                  ? "./img/star-active.png"
+                  : "./img/star-inactive.png"
+              }
+              alt=""
+            />
+          ))}
         </div>
       </div>
       <div className="housing-dropdown">
