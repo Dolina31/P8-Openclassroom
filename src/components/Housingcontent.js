@@ -33,7 +33,7 @@ const Housingcontent = () => {
   const hostnamearray = logement.host.name.split(" ");
 
   return (
-    <div className="housing">
+    <div className="housing-content">
       <div className="carrousel-position">
         <div className="carrousel">
           <img

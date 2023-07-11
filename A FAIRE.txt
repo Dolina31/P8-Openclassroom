@@ -1,4 +1,7 @@
-- les img de la page Home ont un border radius different en mode mediaqueries
 - rendre l'animation et le fonctionnement des dropdown fonctionnels
-- sur la page About les dropdown-content ne font pas la même taille que les dropdown-bar alors qu'ils sont regler sur le même pourcentage, pas responsive
-- le chemin vers la page d'erreur404 n'est pas bon, il inclut la "mauvaise recherche" faite
+- les dropdown de la page about sont "rognés" en mode ouvert
+- faire le responsive de la page error (trouver la div qui englobe la page)
+- positionner correctement la section "host-infos" en mode responsive
+- les etoiles de la page housing disparraisent sous les dropdowns au lieu de les pousser
+- modifier la parti responsive de la de home avec des images de la même taille que la bannière
+- passer les li de la nav par des majuscules en responsive (et tout réadapter pour que cela fonctionne)

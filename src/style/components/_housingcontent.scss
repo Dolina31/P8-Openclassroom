@@ -1,5 +1,5 @@
-.housing {
-  margin: 1% 8%;
+.housing-content {
+  margin: 0% 8%;
 }
 .carrousel-position {
   display: flex;
@@ -17,16 +17,15 @@
     }
 
     .arrow {
+      top: 35%;
       cursor: pointer;
       position: absolute;
     }
 
     .right-arrow {
-      top: 35%;
       right: 10px;
     }
     .left-arrow {
-      top: 35%;
       left: 10px;
     }
 
@@ -45,6 +44,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 20px;
+  gap: 20px;
 
   .logement-infos {
     display: flex;
@@ -110,7 +110,7 @@
 }
 
 .housing-dropdown {
-  margin: 2% 0% 3% 0%;
+  margin: 3% 0% 3% 0%;
   display: flex;
   justify-content: center;
   gap: 70px;
@@ -128,5 +128,54 @@
     list-style-type: none;
     padding-left: 0;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carrousel-position {
+    .carrousel {
+      .arrow {
+        top: 45%;
+        height: 40px;
+      }
+    }
+
+    .carrousel_slide-number {
+      display: none;
+    }
+  }
+
+  .infos-position {
+    .logement-infos {
+      gap: 10px;
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  }
+
+  .tags-and-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 50px;
+    padding-bottom: 35px;
+    gap: 20px;
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .rate {
+      padding-top: 5px;
+    }
+  }
+
+  .housing-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }

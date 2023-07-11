@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 8%;
+  margin: 20px 8% 30px 8%;
 
   img {
     width: 155px;
@@ -28,12 +28,29 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 570px) {
   .navigation {
-    justify-content: center;
-
     ul {
       gap: 20px;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .navigation {
+    display: flex;
+    margin: 20px 7%;
+
+    img {
+      width: 90px;
+      height: 32px;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    ul {
+      padding: 10px;
     }
   }
 }

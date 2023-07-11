@@ -11,11 +11,11 @@
   }
 
   &.close {
-    overflow: hidden;
     img {
       transform: rotate(0deg);
     }
     .dropdown_content {
+      display: none;
       margin-top: -1rem;
       transition: margin-top 0.3s ease-in-out;
     }
@@ -23,7 +23,6 @@
 }
 
 .dropdown_bar {
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -45,7 +44,6 @@
 }
 
 .dropdown_content {
-  z-index: 0;
   font-size: 1.35em;
   line-height: 1.5;
   padding: 30px;

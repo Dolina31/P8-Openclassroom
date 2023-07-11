@@ -16,8 +16,8 @@ const Aboutcontent = () => {
 
   return (
     <div className="about-content">
-      <div className="img-banner">
-        <div className="img-overlay"></div>
+      <div className="img-banner about-banner">
+        <div className="img-overlay about-banner-overlay"></div>
         <img src="./img/About-banner-img.png" alt="Paysage" />
       </div>
 

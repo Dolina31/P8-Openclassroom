@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <img src="../img/Logowhite.png" alt="Logo de Kasa" />
-      <p>© 2020 Kasa. All rights reserved</p>
+      <p>
+        © 2020 Kasa. <span> All rights reserved</span>
+      </p>
     </div>
   );
 };
