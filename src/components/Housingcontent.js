@@ -11,11 +11,7 @@ const Housingcontent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!logement) {
-    return (
-      <div>
-        <Error404 />
-      </div>
-    );
+    return <Error404 />;
   }
 
   const nextSlide = () => {
@@ -66,33 +62,33 @@ const Housingcontent = () => {
         <div className="logement-infos">
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
-        </div>
-        <div className="host-infos">
-          <div className="host-name">
-            <p>{hostnamearray[0]}</p>
-            <p>{hostnamearray[1]}</p>
+          <div className="tags">
+            {logement.tags.map((tag, index) => (
+              <button key={index}>{tag}</button>
+            ))}
           </div>
-          <img src={logement.host.picture} alt="" />
         </div>
-      </div>
-      <div className="tags-and-rate">
-        <div className="tags">
-          {logement.tags.map((tag, index) => (
-            <button key={index}>{tag}</button>
-          ))}
-        </div>
-        <div className="rate">
-          {Array.from({ length: 5 }, (_, index) => (
-            <img
-              key={index}
-              src={
-                index < logement.rating
-                  ? "./img/star-active.png"
-                  : "./img/star-inactive.png"
-              }
-              alt=""
-            />
-          ))}
+        <div className="host-and-rate">
+          <div className="host-infos">
+            <div className="host-name">
+              <p>{hostnamearray[0]}</p>
+              <p>{hostnamearray[1]}</p>
+            </div>
+            <img src={logement.host.picture} alt="" />{" "}
+          </div>
+          <div className="rate">
+            {Array.from({ length: 5 }, (_, index) => (
+              <img
+                key={index}
+                src={
+                  index < logement.rating
+                    ? "./img/star-active.png"
+                    : "./img/star-inactive.png"
+                }
+                alt=""
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className="housing-dropdown">

@@ -62,49 +62,51 @@
     }
   }
 
-  .host-infos {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .host-name {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-    }
-  }
-}
-
-.tags-and-rate {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 28px;
-
   .tags {
     display: flex;
-    gap: 25px;
+    gap: 10px;
 
     button {
       border: none;
       background-color: $primary-color;
       color: white;
       font-size: 0.9em;
-      padding: 5px 30px;
+      padding: 5px 20px;
       border-radius: 12px;
     }
   }
 
-  .rate {
-    img {
-      height: 30px;
-      width: 30px;
+  .host-and-rate {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-host-and-rate;
+    justify-content: space-between;
+
+    .host-infos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .host-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-host-and-rate;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    .rate {
+      img {
+        margin-top: auto;
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 }
@@ -138,6 +140,9 @@
         top: 45%;
         height: 40px;
       }
+      .current-img {
+        height: 320px;
+      }
     }
 
     .carrousel_slide-number {
@@ -146,30 +151,34 @@
   }
 
   .infos-position {
-    .logement-infos {
-      gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: auto;
 
+    .logement-infos {
+      gap: 5px;
       h1 {
         font-size: 1.8em;
       }
     }
-  }
 
-  .tags-and-rate {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-bottom: 50px;
-    padding-bottom: 35px;
-    gap: 20px;
+    .host-and-rate {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+    }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-    }
 
-    .rate {
-      padding-top: 5px;
+      button {
+        border-radius: 8px;
+      }
     }
   }
 
@@ -177,5 +186,15 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carrousel-position {
+    .carrousel {
+      .current-img {
+        height: 250px;
+      }
+    }
   }
 }

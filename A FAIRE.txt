@@ -1,7 +1,3 @@
 - rendre l'animation et le fonctionnement des dropdown fonctionnels
-- les dropdown de la page about sont "rognés" en mode ouvert
-- faire le responsive de la page error (trouver la div qui englobe la page)
-- positionner correctement la section "host-infos" en mode responsive
-- les etoiles de la page housing disparraisent sous les dropdowns au lieu de les pousser
-- modifier la parti responsive de la de home avec des images de la même taille que la bannière
+- positionner correctement les etoiles de la version desktop de la page hosting
 - passer les li de la nav par des majuscules en responsive (et tout réadapter pour que cela fonctionne)

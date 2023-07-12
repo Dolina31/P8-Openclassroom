@@ -17,7 +17,11 @@
     width: 85%;
 
     .dropdown_bar {
-      width: 100%;
+      width: 98%;
+    }
+
+    .dropdown_content {
+      width: 95%;
     }
   }
 }
@@ -25,7 +29,11 @@
 @media screen and (max-width: 770px) {
   .about-infos {
     .dropdown {
-      width: 95%;
+      width: 100%;
+
+      .dropdown_bar {
+        width: 95%;
+      }
     }
   }
 }
