@@ -92,17 +92,16 @@ const Housingcontent = () => {
         </div>
       </div>
       <div className="housing-dropdown">
-        <Dropdown title="Description" content={<p>{logement.description}</p>} />
-        <Dropdown
-          title="Équipements"
-          content={
-            <ul>
-              {logement.equipments.map((equipement, index) => (
-                <li key={index}>{equipement}</li>
-              ))}
-            </ul>
-          }
-        />
+        <Dropdown title="Description">
+          <p>{logement.description}</p>
+        </Dropdown>
+        <Dropdown title="Équipements">
+          <ul>
+            {logement.equipments.map((equipement, index) => (
+              <li key={index}>{equipement}</li>
+            ))}
+          </ul>
+        </Dropdown>
       </div>
     </div>
   );

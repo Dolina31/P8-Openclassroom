@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Dropdown = ({ title, content }) => {
+const Dropdown = ({ title, content, children }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
 
   const toggleDropdown = () => {
@@ -13,7 +13,7 @@ const Dropdown = ({ title, content }) => {
         <h1>{title}</h1>
         <img src="./img/arrow_icon.png" alt="flèche" onClick={toggleDropdown} />
       </div>
-      <div className="dropdown_content">{content}</div>
+      <div className="dropdown_content">{children}</div>
     </div>
   );
 };
