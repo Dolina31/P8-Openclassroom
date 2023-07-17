@@ -2,27 +2,15 @@
   margin: 0% 8%;
 }
 .about-infos {
-  padding-top: 15px;
+  padding-top: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   .dropdown {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-bottom: 30px;
     width: 85%;
-
-    .dropdown_bar {
-      width: 98%;
-    }
-
-    .dropdown_content {
-      width: 95%;
-    }
   }
 }
 

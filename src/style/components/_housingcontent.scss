@@ -195,4 +195,26 @@
       }
     }
   }
+
+  .infos-position {
+    .host-and-rate {
+      padding-top: 10px;
+      .host-infos {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        .host-name {
+          font-size: 0.9em;
+        }
+      }
+      .rate {
+        img {
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
+  }
 }

@@ -1,2 +1,1 @@
 - rendre l'animation et le fonctionnement des dropdown fonctionnels
-- passer les li de la nav par des majuscules en responsive (et tout réadapter pour que cela fonctionne)

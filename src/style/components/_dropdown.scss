@@ -4,10 +4,6 @@
     img {
       transform: rotate(180deg);
     }
-    .dropdown_content {
-      margin-top: 0;
-      transition: margin-top 0.3s ease-in-out;
-    }
   }
 
   &.close {
@@ -16,8 +12,6 @@
     }
     .dropdown_content {
       display: none;
-      margin-top: -1rem;
-      transition: margin-top 0.3s ease-in-out;
     }
   }
 }
